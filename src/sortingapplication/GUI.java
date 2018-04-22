@@ -47,7 +47,7 @@ public class GUI {
         
         // sorting radio choices
         // bubble, insertion, selection, merge, shell, quick
-        JPanel sortRadios = new JPanel(new GridLayout(6, 1));
+        JPanel sortRadios = new JPanel(new GridLayout(4, 1));
         ButtonGroup radioGroup1 = new ButtonGroup();
         JRadioButton bubbleRadio = new JRadioButton("Bubble Sort");
         sortRadios.add(bubbleRadio);
@@ -59,20 +59,14 @@ public class GUI {
         JRadioButton selectionRadio = new JRadioButton("Selection Sort");
         sortRadios.add(selectionRadio);
         radioGroup1.add(selectionRadio);
-        JRadioButton mergeRadio = new JRadioButton("Merge Sort");
-        sortRadios.add(mergeRadio);
-        radioGroup1.add(mergeRadio);
         JRadioButton shellRadio = new JRadioButton("Shell Sort");
         sortRadios.add(shellRadio);
         radioGroup1.add(shellRadio);
-        JRadioButton quickRadio = new JRadioButton("Quick Sort");
-        sortRadios.add(quickRadio);
-        radioGroup1.add(quickRadio);
         sortPanel.add(sortRadios);
 
         // second set of sorting radio choices
         // bubble, insertion, selection, merge, shell, quick
-        JPanel sortRadios2 = new JPanel(new GridLayout(6, 1));
+        JPanel sortRadios2 = new JPanel(new GridLayout(4, 1));
         ButtonGroup radioGroup2 = new ButtonGroup();
         JRadioButton bubbleRadio2 = new JRadioButton("Bubble Sort");
         sortRadios2.add(bubbleRadio2);
@@ -84,15 +78,9 @@ public class GUI {
         JRadioButton selectionRadio2 = new JRadioButton("Selection Sort");
         sortRadios2.add(selectionRadio2);
         radioGroup2.add(selectionRadio2);
-        JRadioButton mergeRadio2 = new JRadioButton("Merge Sort");
-        sortRadios2.add(mergeRadio2);
-        radioGroup2.add(mergeRadio2);
         JRadioButton shellRadio2 = new JRadioButton("Shell Sort");
         sortRadios2.add(shellRadio2);
         radioGroup2.add(shellRadio2);
-        JRadioButton quickRadio2 = new JRadioButton("Quick Sort");
-        sortRadios2.add(quickRadio2);
-        radioGroup2.add(quickRadio2);
         sortPanel.add(sortRadios2);
                 
         // panel for button
@@ -124,12 +112,8 @@ public class GUI {
                     out1 = "insertion";
                 } else if(selectionRadio.isSelected()){
                     out1 = "selection";
-                } else if(mergeRadio.isSelected()){
-                    out1 = "merge";
                 } else if(shellRadio.isSelected()){
                     out1 = "shell";
-                } else if(quickRadio.isSelected()){
-                    out1 = "quick";
                 } else {
                     // shouldn't happen since it has default selection
                     JOptionPane.showMessageDialog(null, "Nothing from first column selected.");
@@ -142,12 +126,8 @@ public class GUI {
                     out2 = "insertion";
                 } else if(selectionRadio2.isSelected()){
                     out2 = "selection";
-                } else if(mergeRadio2.isSelected()){
-                    out2 = "merge";
                 } else if(shellRadio2.isSelected()){
                     out2 = "shell";
-                } else if(quickRadio2.isSelected()){
-                    out2 = "quick";
                 } else {
                     // shouldn't happen since it has default selection
                     JOptionPane.showMessageDialog(null, "Nothing from second column selected.");
