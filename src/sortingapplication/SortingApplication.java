@@ -18,7 +18,8 @@ public class SortingApplication {
 
         // not sure if this is correct
         JVMWarmup warmup = new JVMWarmup();
-        for (int i = 0; i < 1000; i++){
+        for (int i = 0; i < 10000; i++){
+            warmup.run();
         }
         
         GUI.MainDisplay();

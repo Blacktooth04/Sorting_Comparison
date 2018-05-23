@@ -101,58 +101,58 @@ public class GUI {
         mainFrame.setVisible(true);
         
         // action listener for sort button
-            clickToSort.addActionListener((ActionEvent ae) -> {
+        clickToSort.addActionListener((ActionEvent ae) -> {
 
-                String out1 = "", out2 = "";
-                pressOn = true;
-                
-                if (bubbleRadio.isSelected()) {
-                    out1 = "bubble";
-                } else if(insertionRadio.isSelected()){
-                    out1 = "insertion";
-                } else if(selectionRadio.isSelected()){
-                    out1 = "selection";
-                } else if(shellRadio.isSelected()){
-                    out1 = "shell";
-                } else {
-                    // shouldn't happen since it has default selection
-                    JOptionPane.showMessageDialog(null, "Nothing from first column selected.");
-                    pressOn = false;
-                }
-                
-                if (bubbleRadio2.isSelected()) {
-                    out2 = "bubble";
-                } else if(insertionRadio2.isSelected()){
-                    out2 = "insertion";
-                } else if(selectionRadio2.isSelected()){
-                    out2 = "selection";
-                } else if(shellRadio2.isSelected()){
-                    out2 = "shell";
-                } else {
-                    // shouldn't happen since it has default selection
-                    JOptionPane.showMessageDialog(null, "Nothing from second column selected.");
-                    pressOn = false;
-                }
-                
-                // TODO need to get data set number, create the data sets, then
-                // pass to appropriate sorts. 
-                dataSets = Integer.parseInt(numberOfDataSets.getText());
-                System.out.println("Comparing " + out1 + " and " + out2 + " with " + dataSets + " data sets.");
+            String out1 = "", out2 = "";
+            pressOn = true;
 
-                // if anything set pressOn to false, do nothing
-                if (pressOn) {
-                    
-                    // create the data
-                    create.CreateData(dataSets, out1, out2);
-                    
-                    mainPanel.setVisible(false);
-                    DisplayGUI(dataSets, out1, out2);
-                }
-                
-            }); // end Search Button Action Listener    
+            if (bubbleRadio.isSelected()) {
+                out1 = "bubble";
+            } else if(insertionRadio.isSelected()){
+                out1 = "insertion";
+            } else if(selectionRadio.isSelected()){
+                out1 = "selection";
+            } else if(shellRadio.isSelected()){
+                out1 = "shell";
+            } else {
+                // shouldn't happen since it has default selection
+                JOptionPane.showMessageDialog(null, "Nothing from first column selected.");
+                pressOn = false;
+            }
+
+            if (bubbleRadio2.isSelected()) {
+                out2 = "bubble";
+            } else if(insertionRadio2.isSelected()){
+                out2 = "insertion";
+            } else if(selectionRadio2.isSelected()){
+                out2 = "selection";
+            } else if(shellRadio2.isSelected()){
+                out2 = "shell";
+            } else {
+                // shouldn't happen since it has default selection
+                JOptionPane.showMessageDialog(null, "Nothing from second column selected.");
+                pressOn = false;
+            }
+
+            // TODO need to get data set number, create the data sets, then
+            // pass to appropriate sorts. 
+            dataSets = Integer.parseInt(numberOfDataSets.getText());
+            System.out.println("Comparing " + out1 + " and " + out2 + " with " + dataSets + " data sets.");
+
+            // if anything set pressOn to false, do nothing
+            if (pressOn) {
+
+                // create the data
+                create.CreateData(dataSets, out1, out2);
+
+                mainPanel.setVisible(false);
+                DisplayGUI(dataSets, out1, out2);
+            }
+
+        }); // end Search Button Action Listener    
     } // end main gui
     
-    public static void DisplayGUI(int dataSets, String selection1, String selection2) {
+    private static void DisplayGUI(int dataSets, String selection1, String selection2) {
         
         CreateData create = new CreateData();
         

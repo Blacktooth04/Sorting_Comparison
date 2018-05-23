@@ -17,16 +17,11 @@ Class containing various sorting algorithms
 public class SortingAlg {
     
     long executionTime = 0;
-    JVMWarmup warmup = new JVMWarmup();
 
     long bubbleSort(int array[]) {
         int temp, n = array.length;
         boolean swap;
-
-        for (int i = 0; i < 100; i++){
-            warmup.run();
-        }
-        
+      
         // initialize the time
         long startTime = executionTime();
 
@@ -50,11 +45,7 @@ public class SortingAlg {
     
     long insertionSort(int array[]) {
         int position, value, n = array.length;
-        
-        for (int i = 0; i < 100; i++){
-            warmup.run();
-        }
-        
+               
         // initialize the time
         long startTime = executionTime();
         
@@ -77,11 +68,7 @@ public class SortingAlg {
     
     long selectionSort(int array[]) {
         int n = array.length, min;
-        
-        for (int i = 0; i < 100; i++){
-            warmup.run();
-        }
-        
+                
         // initialize the time
         long startTime = executionTime();
         
@@ -111,10 +98,6 @@ public class SortingAlg {
         // initialize the time
         long startTime = executionTime();
         
-        for (int i = 0; i < 100; i++){
-            warmup.run();
-        }
-        
         // find the interval using Knuth's Formula
         int interval = 1;
         while (interval <= array.length / 3){
@@ -139,7 +122,7 @@ public class SortingAlg {
     } // end shell sort
     
         
-    long executionTime() {
+    private long executionTime() {
         long time = System.nanoTime();
         return time;
     }

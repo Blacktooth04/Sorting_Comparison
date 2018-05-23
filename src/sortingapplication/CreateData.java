@@ -63,7 +63,7 @@ public class CreateData {
         setExecutionTims(avgExecutionTime, avgExecutionTime2);
     }
     
-    int[] createRandomNumbers(int count) {
+    private int[] createRandomNumbers(int count) {
         int[] array = new int[count];
         int value;
         
@@ -76,13 +76,13 @@ public class CreateData {
         return array;
     }
     
-    int randomDataSetSize(int count) {
+    private int randomDataSetSize(int count) {
         Random rand = new Random();
         int value = rand.nextInt(5000);
         return value;
     }
     
-    public long performSort(int[] array, String one) {
+    private long performSort(int[] array, String one) {
         
         SortingAlg sort = new SortingAlg();
         long time = 0;
@@ -99,7 +99,7 @@ public class CreateData {
         return time;
     }
     
-    long findAvgExecutionTime(int dataSets, long executionTime) {
+    private long findAvgExecutionTime(int dataSets, long executionTime) {
         long avgET = executionTime / dataSets;
         return avgET;
     }
@@ -108,7 +108,7 @@ public class CreateData {
         return dataSetSize[count];
     }
     
-    void setExecutionTims (long eT, long eT2) {
+    private void setExecutionTims (long eT, long eT2) {
         exTime1 = eT;
         exTime2 = eT2;
     }
@@ -116,12 +116,15 @@ public class CreateData {
     long getExecutionTime1() {
         return exTime1;
     }
+    
     long getExecutionTime2() {
         return exTime2;
     }
+    
     long getTime1(int count) {
         return executionTimeArray[count];
     }
+    
     long getTime2(int count) {
         return executionTimeArray2[count];
     }
